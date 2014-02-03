@@ -20,3 +20,10 @@ foreach ($software->application()->order("title") as $application) { // get all 
     }
 }
 ?>
+
+## DB conexion example:
+
+´´´
+$pdo = new PDO('mysql:dbname=tasks;host=localhost', USERNAME, PASSWORD);
+$db = new NotORM($pdo);
+´´´

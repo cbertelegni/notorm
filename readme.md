@@ -22,8 +22,11 @@ foreach ($software->application()->order("title") as $application) { // get all 
 ?>
 
 ## DB conexion example:
-
-´´´
+```
 $pdo = new PDO('mysql:dbname=tasks;host=localhost', USERNAME, PASSWORD);
 $db = new NotORM($pdo);
-´´´
+foreach ($db->task() as $task) {
+            echo $task['id'] . " task_id:" . $task['task']. "\n project_id:" . $task['project_id'] . "\n Status:" . $task['status'];
+            );
+        }
+```
